@@ -6,5 +6,6 @@ android {
   compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
   kotlinOptions { jvmTarget = JavaVersion.VERSION_17.toString() }
   defaultConfig { applicationId = "com.example.docuscan"; minSdk = 24; targetSdk = 36; versionCode = flutter.versionCode; versionName = flutter.versionName }
+  buildTypes { release { proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") } }
 }
 flutter { source = "../.." }
